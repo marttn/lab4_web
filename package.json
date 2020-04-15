@@ -1,0 +1,16 @@
+{
+  "name": "lab4",
+  "version": "1.0.0",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start:client": "cd cookbook-сlient && npm run start",
+    "start:server": "cd cookbook-server && npm run start",
+    "start": "concurrently \"npm run start:client\" \"npm run start:server\""
+  },
+  "dependencies": {
+    "concurrently": "^5.1.0",
+    "devDependencies": {
+      "concurrently": "^5.1.0"
+    }
+  }
+}

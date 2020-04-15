@@ -1,0 +1,27 @@
+<div class="row">
+  <div class="col-xs-12">
+    <a [routerLink]="['add']" class="btn btn-success">New Recipe</a>
+  </div>
+  <div class="search">
+    <input [(ngModel)]="searchText" placeholder="search text goes here">
+  </div>
+  <div>
+    <button  class="btn btn-link"  (click)="sort()">Sort desc</button>
+  </div>
+</div>
+<hr>
+<div class="row"> <!-- sortBy: 'desc':'name'-->
+  <div class="col-xs-12">
+    <app-recipe-item
+      *ngFor="let recipeEl of recipes | filter : searchText"
+      [recipe]="recipeEl"></app-recipe-item>
+  </div>
+</div>
+<style>
+  .search {
+    max-width: 500px;
+    padding-bottom: 50px;
+    margin:auto;
+  }
+</style>
+

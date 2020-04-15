@@ -1,0 +1,25 @@
+<div>
+  <button type="button" class="btn btn-info" (click)="onEditRecipe()">Edit Recipe</button>
+  <button type="button" class="btn btn-danger" (click)="onDeleteRecipe()">Delete Recipe</button>
+  <button type="button" class="btn btn-link" (click)="back()">Back</button>
+</div>
+<div class="row">
+  <div class="des col-xs-12">
+    <h2>{{ recipe.name }}</h2>
+  </div>
+</div>
+<div class="row">
+  <div class="des col-xs-12">
+    {{ recipe.category }}
+  </div>
+</div>
+<div class="row">
+  <div class="des col-xs-12">
+    {{ recipe.shortDesc }}
+  </div>
+</div>
+<div class="row">
+  <div class="des col-xs-12">
+    {{ recipe.longDesc }}
+  </div>
+</div>

@@ -1,0 +1,16 @@
+<a
+  style="cursor: pointer;"
+  [routerLink]="[recipe.id]"
+  routerLinkActive="active"
+  class="list-group-item clearfix">
+  <div class="pull-left">
+    <h4 hidden class="list-group-item-heading">{{ recipe.id }}</h4>
+    <h4 class="list-group-item-heading">{{ recipe.name }}</h4>
+    <img src="../../../../assets/recipe-icon.png">
+    <h4 class="list-group-item-text">{{ recipe.category }}</h4>
+    <p class="list-group-item-text">{{ recipe.shortDesc }}</p>
+    <p class="list-group-item-text">{{ recipe.longDesc }}</p>
+    <h4 hidden class="list-group-item-text">{{ recipe.createdDate }}</h4>
+  </div>
+
+</a>

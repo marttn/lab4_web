@@ -1,0 +1,56 @@
+<div class="row">
+  <div class="col-xs-12" style="width: 100%">
+    <form [formGroup]="recipeForm" style="width: 100%" (ngSubmit)="onSubmit()">
+      <div class="row">
+        <div style="width: 100%">
+          <button
+            type="submit"
+            class="btn btn-success"
+            [disabled]="!recipeForm.valid">Save
+          </button>
+          <button type="button" class="btn btn-danger" (click)="onCancel()">Cancel</button>
+        </div>
+      </div>
+      <div class="row">
+        <input formControlName="id" type="hidden" class="form-control" id="id" placeholder="id">
+      </div>
+      <div class="row">
+        <div style="width: 100%">
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input formControlName="name" type="text" class="form-control" id="name" placeholder="Name">
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div style="width: 100%">
+          <div class="form-group">
+            <label for="category">Category</label>
+            <input formControlName="category" type="text" class="form-control" id="category" placeholder="Category">
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div style="width: 100%">
+          <div class="form-group">
+            <label for="shortDesc">Short description</label>
+            <textarea formControlName="shortDesc" class="form-control" rows="6" type="text" id="shortDesc"
+                      placeholder="Type here ... "></textarea>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div style="width: 100%">
+          <div class="form-group">
+            <label for="longDesc">Long description</label>
+            <textarea formControlName="longDesc" class="form-control" rows="6" type="text" id="longDesc"
+                      placeholder="Type here ... "></textarea>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <input  type="hidden" formControlName="createdDate" class="form-control" id="createdDate">
+      </div>
+    </form>
+  </div>
+</div>
